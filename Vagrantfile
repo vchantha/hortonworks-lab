@@ -123,7 +123,7 @@ SHELL
       masternode.vm.network "private_network", ip: "192.168.56.10#{i}"
       masternode.vm.provider "virtualbox" do |v|
         v.name = "master#{i}"
-        v.memory = 8192
+        v.memory = 14000
         v.cpus = 2
         v.gui=false
       end ## end provider
@@ -140,7 +140,7 @@ SHELL
       workernode.vm.network "private_network", ip: "192.168.56.20#{i}"
       workernode.vm.provider "virtualbox" do |v|
         v.name = "worker#{i}"
-        v.memory = 4096
+        v.memory = 2096
         v.cpus = 1
         v.gui=false
       end ## end provider
