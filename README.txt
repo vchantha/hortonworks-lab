@@ -94,6 +94,23 @@ mysql> create USER 'ambari'@'%' IDENTIFIED BY "bigdata";
 mysql> create USER 'hive'@'%' IDENTIFIED BY "bigdata";
 GRANT ALL ON *.* TO 'hive'@'%';
 
+mysql> create USER 'oozie'@'%' IDENTIFIED BY "bigdata";
+GRANT ALL ON *.* TO 'oozie'@'%';
+FLUSH PRIVILEGES;
+create database ranger;
+
+
+create database rangerkms;
+mysql> create USER 'rangerkms'@'%' IDENTIFIED BY "bigdata";
+GRANT ALL ON *.* TO 'rangerkms'@'%';
+FLUSH PRIVILEGES;
+
+
+create USER 'ranger'@'%' IDENTIFIED BY "bigdata";
+GRANT ALL ON *.* TO 'ranger'@'%';
+FLUSH PRIVILEGES;
+
+
 https://community.cloudera.com/t5/Support-Questions/Hive-with-mysql-setup-Check-db-connection-check-was/td-p/146886
 ambari-server setup --jdbc-db=mysql --jdbc-driver=/usr/share/java/mysql-connector-java.jar
 
@@ -103,6 +120,14 @@ GRANT ALL ON *.* TO 'ambari'@'%';
 mysql> select user,host from mysql.user;
 more /etc/my.cnf
 [mysqld]
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+symbolic-links=0
+log-error=/var/log/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid
+
+##skip-grant-tables=1 ## Ignore password require****
+skip_ssl
 max_allowed_packet=128M
 net_read_timeout = 30
 net_write_timeout = 60
@@ -116,6 +141,7 @@ max_connections=2000
 innodb_buffer_pool_size= 3G
 join_buffer_size= 2M
 innodb_log_file_size = 1G
+
 
 
 create database ambari;
@@ -142,3 +168,12 @@ systemctl restart sshd
 
 
 admin@123
+bigdata
+Alast : A!@$$%5tgb2022Bidata%Admin
+Knox  : Knox$%5tgb2022Bidata%Admin
+Oozie : Oozie%5tgb2022Bidata%Admin
+ranger: ranger5tgb2022Bidata%Admin
+https://docs.cloudera.com/HDPDocuments/HDP2/HDP-2.3.4/bk_Ranger_Install_Guide/content/updating_ranger_admin_passwords.html
+
+
+KMS   : KMS$$%5tgb2022Bidata%Admin
