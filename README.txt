@@ -5,8 +5,7 @@ mkdir -p /var/www/html/repo/
 chmod -R 775 /var/www/html/repo
 
 http://master1/repo/HDF/centos7/3.4.1.1-4
-https://ro-bucharest-repo.bigstepcloud.com/hortonworks-repos/HDP/centos7/3.1.0.0
-https://ro-bucharest-repo.bigstepcloud.com/hortonworks-repos/HDP-UTILS/centos7/1.1.0.22/
+
 
 1.)-- set password less multi nodes ---
 sudo su - root
