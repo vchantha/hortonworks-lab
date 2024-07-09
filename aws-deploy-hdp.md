@@ -98,6 +98,6 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Specified key was too
 SQLException : SQL state: 42000 com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Specified key was too long; max key length is 767 bytes ErrorCode: 1071
 2024-07-09 06:03:01,226  [E] kms_core_db.sql DB schema import failed!
 
-ALTER TABLE `mytable` ADD UNIQUE ( column1(15), column2(200) );
+[[ALTER TABLE `mytable` ADD UNIQUE ( column1(15), column2(200) );
 
-CREATE TABLE `ranger_masterkey` ( `id` bigint( 20 ) NOT NULL AUTO_INCREMENT , `create_time` datetime DEFAULT NULL , `update_time` datetime DEFAULT NULL , `added_by_id` bigint( 20 ) DEFAULT NULL , `upd_by_id` bigint( 20 ) DEFAULT NULL , `cipher` varchar( 255 ) DEFAULT NULL UNIQUE, `bitlength` int DEFAULT NULL UNIQUE, `masterkey` varchar(2048), PRIMARY KEY ( `id` ) )ROW_FORMAT=DYNAMIC; 
+https://kylo.readthedocs.io/en/v0.8.2/installation/KerberosInstallationExampleHDP2.4.html
