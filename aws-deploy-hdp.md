@@ -1,3 +1,6 @@
+fix: druid
+ALTER DATABASE dbname CHARACTER SET utf8 COLLATE utf8_general_ci;
+
 https://cloudxlab.com/blog/install-hdp-on-aws/
 
 IAM: ami-0f734c7a42620a83d
